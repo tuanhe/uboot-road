@@ -21,9 +21,10 @@ http://www.embeddedforu.com/embedded-linux/raspberry-pi/how-to-compile-mainline-
 
 反正编译uboot用到的几个指令就是：
 git clone git://git.denx.de/u-boot.git && cd u-boot
+export ARCH=arm 
+export CROSS_COMPILE=arm-linux-gnueabi-
 make am335x_boneblack_defconfig
-ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- make
-make j4
+make -j4
 
 
 
