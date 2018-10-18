@@ -26,6 +26,10 @@ export CROSS_COMPILE=arm-linux-gnueabi-
 make am335x_boneblack_defconfig
 make -j4
 
+如果要查找板子的编译文件，可以用这个指令
+ls configs/*_defconfig
+或者find . -name ""nit*defconfig""
+
 
 
 
