@@ -1,0 +1,11 @@
+about raspberry pi with uboot
+I have an raspberry pi board which comes with bcm283x broadcom architecture and arm1176 arm core. 
+So start.S is located in arch/arm/cpu/arm1176/start.S. 
+This will initializes critical registers and disables mmu. 
+Next it will do lowlevel_init and then branch to _main 
+which is defined in case of raspberry pi is in arch/arm/lib/crt0.S 
+This initializes stack pointer 
+and global data and calls board_init_f to initialize the system RAM(DRAM) 
+for executing u-boot code. It should use global_data pointer to execute.
+
+
